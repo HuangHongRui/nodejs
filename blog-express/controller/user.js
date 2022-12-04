@@ -1,5 +1,5 @@
 const { exec, escape } = require('../db/mysql');
-const { generatePassword } = require('../utils/index');
+const { generatePassword } = require('../utils/cryp')
 
 const login = (reqBody) => {
   let { username, password } = reqBody;

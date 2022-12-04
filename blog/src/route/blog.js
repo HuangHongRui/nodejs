@@ -4,9 +4,9 @@ const { SuccessMessage, ErrorMessage } = require('../model/resModel');
 // 登录验证
 const loginCheck = (req) => {
   if (!req.session.username) {
-    console.log(req.session, 'wtf')
-        return Promise.resolve(new ErrorMessage('未登录'))
-  }
+    return Promise.resolve(new ErrorMessage('未登录'))
+  } 
+  return true
 }
 
 const blogRouterHandle = (req, res) => {

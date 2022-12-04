@@ -1,0 +1,2 @@
+::1 - - [03/Dec/2022:11:29:44 +0000] "GET /api/blog/list?isadmin=1 HTTP/1.1" 200 449 "-" "PostmanRuntime/7.29.2"
+::1 - - [03/Dec/2022:11:30:20 +0000] "GET /api/blog/detail?id=2 HTTP/1.1" 200 147 "-" "PostmanRuntime/7.29.2"
