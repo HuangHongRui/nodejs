@@ -1,0 +1,9 @@
+{
+  "name": "koa-middleware",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.14.0"
+  }
+}

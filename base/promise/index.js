@@ -18,15 +18,15 @@ const getFileContent = (fileName) => {
   return promise;
 }
 
-getFileContent('a.json').then(aData => {
-  console.log('a data: ', aData, aData.next)
-  return getFileContent(aData.next)
-}).then(bData => {
-  console.log('b data: ', bData)
-  return getFileContent(bData.next)
-}).then(cData => {
-  console.log('c data: ', cData)
-})
+// getFileContent('a.json').then(aData => {
+//   console.log('a data: ', aData, aData.next)
+//   return getFileContent(aData.next)
+// }).then(bData => {
+//   console.log('b data: ', bData)
+//   return getFileContent(bData.next)
+// }).then(cData => {
+//   console.log('c data: ', cData)
+// })
 
 // STEP 1
 // const fullFileName = path.join(__dirname, 'files', 'a.json');
@@ -62,3 +62,15 @@ getFileContent('a.json').then(aData => {
 //     })
 //   })
 // })
+
+// Async Await
+const readFileData = async () => {
+  const a = await getFileContent('a.json');
+  console.log(a)
+  const b = await getFileContent(a.next);
+  console.log(b)
+  const c = await getFileContent(b.next);
+  console.log(c)
+}
+
+readFileData()
